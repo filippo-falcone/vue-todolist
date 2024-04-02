@@ -28,14 +28,15 @@ createApp({
         };
     },
     methods: {
-        doneOrUndoneTask(task) {
+        doneOrUndoneTask(taskDone) {
             let lineThrowClass;
-            if (task.done) {
+            if (taskDone.done) {
                 lineThrowClass = 'text-decoration-line-through'
             }
             return lineThrowClass;
+        },
+        removeTask(taskIndex) {
+            this.tasks.splice(taskIndex, 1);
         }
-    },
-    created() {
     }
 }).mount('#app');
