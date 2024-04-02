@@ -24,7 +24,8 @@ createApp({
                     text: 'Scendere in garage',
                     done: true,
                 }
-            ]
+            ],
+            taskText: ''
         };
     },
     methods: {
@@ -37,6 +38,15 @@ createApp({
         },
         removeTask(taskIndex) {
             this.tasks.splice(taskIndex, 1);
+        },
+        addTask() {
+            const taskTextTrimmed = this.taskText.trim();
+            let newTask;
+            if (taskTextTrimmed.length >= 5) {
+                newTask = Object.apply(this.tasks, [{ text: taskTextTrimmed, done: false }])
+                this.tasks.push(newTask);
+                this.taskText = '';
+            }
         }
     }
 }).mount('#app');

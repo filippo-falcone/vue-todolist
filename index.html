@@ -29,8 +29,9 @@
                         <img src="img/logo.png" alt="Boolean Logo" width="200">
                     </a>
                     <div class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Aggiungi una task" aria-label="text">
-                        <button class="btn btn-success">Aggiungi</button>
+                        <input class="form-control me-2" type="text" placeholder="Aggiungi una task" aria-label="text"
+                            v-model="taskText">
+                        <button class="btn btn-success" @click="addTask">Aggiungi</button>
                     </div>
                 </div>
             </nav>
