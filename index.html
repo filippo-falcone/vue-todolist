@@ -30,7 +30,7 @@
                     </a>
                     <div class="d-flex">
                         <input class="form-control me-2" type="text" placeholder="Aggiungi una task" aria-label="text"
-                            v-model="taskText">
+                            v-model="taskText" @keyup.enter="addTask">
                         <button class="btn btn-success" @click="addTask">Aggiungi</button>
                     </div>
                 </div>
