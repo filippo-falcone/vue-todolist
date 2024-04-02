@@ -47,6 +47,13 @@ createApp({
                 this.tasks.push(newTask);
                 this.taskText = '';
             }
+        },
+        checkTask(taskDone) {
+            if (taskDone.done) {
+                taskDone.done = false;
+            } else {
+                taskDone.done = true;
+            }
         }
     }
 }).mount('#app');
