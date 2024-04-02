@@ -27,7 +27,15 @@ createApp({
             ]
         };
     },
-    methods: {},
+    methods: {
+        doneOrUndoneTask(task) {
+            let lineThrowClass;
+            if (task.done) {
+                lineThrowClass = 'text-decoration-line-through'
+            }
+            return lineThrowClass;
+        }
+    },
     created() {
     }
 }).mount('#app');
