@@ -22,7 +22,7 @@
 
 <body>
     <div id="app">
-        <header>
+        <header class="position-sticky top-0">
             <nav class="navbar bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
@@ -39,16 +39,16 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="bg-primary">
             <div class="container pt-5">
-                <h1 class="text-center mb-5">To Do List</h1>
+                <h1 class="text-center mb-5 ms-text-dark-blue">To Do List</h1>
                 <div class="row g-4">
                     <div class="col-6 col-md-4 col-lg-3" v-for="task, index in tasks">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
-                                    <h5 class="card-title" :class="doneOrUndoneTask(task)" @click="checkTask(task)">
-                                        {{task.text}}</h5>
+                                    <div class="card-title" :class="doneOrUndoneTask(task)" @click="checkTask(task)">
+                                        {{task.text}}</div>
                                     <button type="button" class="btn-close" aria-label="Close"
                                         @click="removeTask(index)"></button>
                                 </div>
