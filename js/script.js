@@ -25,6 +25,7 @@ createApp({
                     done: true,
                 }
             ],
+            isError: false,
             taskText: ''
         };
     },
@@ -46,6 +47,9 @@ createApp({
                 newTask = Object.apply(this.tasks, [{ text: taskTextTrimmed, done: false }])
                 this.tasks.push(newTask);
                 this.taskText = '';
+                this.isError = false;
+            } else {
+                this.isError = true;
             }
         },
         checkTask(taskDone) {

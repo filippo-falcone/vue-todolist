@@ -28,9 +28,12 @@
                     <a class="navbar-brand" href="#">
                         <img src="img/logo.png" alt="Boolean Logo" width="200">
                     </a>
-                    <div class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Aggiungi una task" aria-label="text"
-                            v-model="taskText" @keyup.enter="addTask">
+                    <div class="d-flex align-items-start">
+                        <div class="me-2">
+                            <input class="form-control me-2" type="text" placeholder="Aggiungi una task"
+                                aria-label="text" v-model="taskText" @keyup.enter="addTask">
+                            <div v-if="isError" class="text-danger">Inserisci al meno 5 caratteri</div>
+                        </div>
                         <button class="btn btn-success" @click="addTask">Aggiungi</button>
                     </div>
                 </div>
