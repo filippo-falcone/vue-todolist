@@ -35,9 +35,8 @@ createApp({
         },
         addTask() {
             const taskTextTrimmed = this.taskText.trim();
-            let newTask;
+            const newTask = { text: taskTextTrimmed, done: false };
             if (taskTextTrimmed.length >= 5) {
-                newTask = Object.apply(this.tasks, [{ text: taskTextTrimmed, done: false }])
                 this.tasks.push(newTask);
                 this.taskText = '';
                 this.isError = false;

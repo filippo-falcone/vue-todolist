@@ -1,6 +1,11 @@
-main{
+main {
   height: 100dvh;
 }
-.ms-text-dark-blue{
+
+.ms-text-dark-blue {
   color: #2a3d5c;
+}
+
+.card-title {
+  cursor: pointer;
 }
