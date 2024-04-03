@@ -30,13 +30,6 @@ createApp({
         };
     },
     methods: {
-        doneOrUndoneTask(taskDone) {
-            let lineThrowClass;
-            if (taskDone.done) {
-                lineThrowClass = 'text-decoration-line-through'
-            }
-            return lineThrowClass;
-        },
         removeTask(taskIndex) {
             this.tasks.splice(taskIndex, 1);
         },
